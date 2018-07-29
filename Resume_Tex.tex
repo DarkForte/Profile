@@ -48,6 +48,15 @@
   \item\small{#1 \vspace{-2pt}}
 }
 
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+      \end{tabular*}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #3 & #4
+      \end{tabular*}
+}
 
 \newcommand{\resumeSubheading}[3]{
   \vspace{-1pt}\item
@@ -77,25 +86,29 @@
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Weichen Ke} & Email: weichenzero@gmail.com\\
-  http://darkforte.github.io & Mobile: +86 185-1184-1030 \\
+  darkforte.github.io $\Diamond$ www.linkedin.com/in/weichenzero/ & Mobile: 412-482-8717 \\
 \end{tabular*}
 
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \begin{itemize}[leftmargin=*, itemsep=-2pt]
-    \resumeSubheading
-      {Carnegie Mellon University, M.S. of Computer Science}{2018.09 -- Present}
-      {}
-    \resumeSubheading
-      {Beijing University of Technology, Bachelor in Computer Science}{2012.09 -- 2016.07}
-      {GPA: 3.93/4.0, Rank: 1/44, TOEFL: 112 (Speaking 26), GRE: 329+4.5 (Q 170)}
+  \begin{itemize}[leftmargin=*, itemsep=-10pt]
+    \resumeEducationHeading
+      {Carnegie Mellon University}{Pittsburgh, PA}
+      {\textit{M.S. in Computer Science}}{2018.08 -- Present}
+    
+    \resumeEducationHeading
+      {Peking University}{Beijing, China}
+      {\textit{Research Assistant in Computer Science, TA of Algorithm Analysis}}{2016.09 -- 2018.06}
+    
+    \resumeEducationHeading
+      {Beijing University of Technology}{Beijing, China}
+      {\textit{Bachelor in Computer Science | GPA: 3.93/4.0, Rank: 1/44}} {2012.09 -- 2016.07}
   \end{itemize}
     
   %\resumeSubHeadingListEnd
@@ -109,48 +122,32 @@
       {Algorithm Research Intern at Smart Mobility Group/AI Labs}
       \resumeItemListStart
         \resumeItem
-        {Designed a strategy of order dispatching with reinforcement learning, which boosted \$20k in daily total driver income and 3\% in order finish rate in simulations.}
+        {Designed a reinforcement learning based order dispatching strategy with Deep Q Network and pushed it online.}
         \resumeItem
-        {Designed and trained a DQN with Keras and learned a value function estimator for order-driver pairs.}
+        {Built an automated feature visualization pipeline with Hive on PySpark.}
         \resumeItem
-        {Constructed pipeline of spatiotemporal features using Hive on PySpark.}
-        \resumeItem
-        {Organized and presented several company-wide tutorials on deep RL topics like A3C, TRPO, and DDPG etc.}
+        {Organized and presented several company-wide tutorials on Deep RL topics like A3C, TRPO, and DDPG etc.}
     \resumeItemListEnd
-      
-%    \resumeSubheading{Peking University}{2016.09 -- 2018.06}{Research Assistant}
-%      \resumeItemListStart
-%        \resumeItem
-%        {Surveyed topics on deep learning, reinforcement learning and blockchain technologies.}
-%        \resumeItem
-%        {TA of Algorithm Analysis and Complexity Theories.}
-%      \resumeItemListEnd
       
     \resumeSubheading
       {Microsoft Research Asia}{2015.07 -- 2016.07}
-      {Research Intern at Software Analytics Group}
+      {Research Intern at Software Analytics Group, Leader of project BigIN4}
       \resumeItemListStart
-        \resumeItem 
-        {Leader of project BigIn4, the big data analyzing backend of Quick Insights in Microsoft Power BI.}
         \resumeItem
         {Proposed a novel algorithm for interactive approximate query processing on big data based on Tree Augmented Bayesian Network, and implemented it on Spark with Scala and Java.}
         \resumeItem
         {Deployed the platform to production cluster running on Hadoop, and analyzed more than 1TB data per day.}
-        \resumeItem
-        {Constructed preprocessing pipeline for complex structural data with SparkSQL.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeMiniheading{Flappy Bird AI based on Deep Reinforcement Learning with Raw Pixels Input}{2017.06}
+    \resumeMiniheading{Flappy Bird AI based on Deep Reinforcement Learning }{2017.06}
         \resumeItemListStart
-            \resumeItem {Designed the network architecture (combined actor and value convolution network) with Tensorflow.}
+            \resumeItem {Designed the network architecture with Tensorflow.}
             \resumeItem {Implemented A3C algorithm from scratch, with asynchronous exploration and model updating using Python.}
-            \resumeItem {Applied frame stacking and background removal that leads to faster convergence and better results.}
         \resumeItemListEnd
-        {\small The AI achieved human-level performance after self-playing for 4 hours on a single GPU.}
     
     \resumeMiniheading{Parameter Server based on C\texttt{++} and MPI}{2017.06}
         \resumeItemListStart
@@ -158,15 +155,13 @@
             \resumeItem {Implemented the architecture with MPI that supports adding/removing workers dynamically.}
             \resumeItem {Implemented sparse parameter transmission to reduce messaging overhead.}
         \resumeItemListEnd
-        {\small The PS can train 1 million parameters with 2GB data in 20 seconds with 4 workers running on 4 machines.}
         
-    \resumeMiniheading{Real-time Online Game: “Bomber Man Online” on C\texttt{++} and Direct2D}{2015.04}
+    \resumeMiniheading{Real-time Online Game: "Bomber Man Online" on C\texttt{++} and Direct2D}{2015.04}
         \resumeItemListStart
-            \resumeItem {Designed messaging protocol under IOCP and managed development process with Git.}
+            \resumeItem {Designed the Client-Server architecture and the messaging protocol under IOCP.}
             \resumeItem {Implemented the game core from scratch and efficient game data access using STL with Visual Studio.}
             \resumeItem {Implemented lockstep multiplayer synchronization model with a mutex based thread scheduler.}
         \resumeItemListEnd
-        {\small The game runs steadily at 60 fps and achieved synchronized gameplay experience among players.}
         
   \resumeSubHeadingListEnd
 
@@ -174,31 +169,32 @@
 \section{Publication}
   \resumeItemListStart
     \resumeItem 
-    {Qingwei Lin, \textbf{Weichen Ke}, Jian-Guang Lou, Hongyu Zhang, Kaixin Sui, Yong Xu, Ziyi Zhou, Bo Qiao, Dongmei Zhang. "BigIN4: Instant, Interactive Insight Identification for Multi-Dimensional Big Data", \textbf{SIGKDD} 2018 (First Student Author) }
+    {Qingwei Lin, \textbf{Weichen Ke}, Jian-Guang Lou, Hongyu Zhang, Kaixin Sui, Yong Xu, Ziyi Zhou, Bo Qiao, Dongmei Zhang. "BigIN4: Instant, Interactive Insight Identification for Multi-Dimensional Big Data", \textbf{SIGKDD 2018} (First Student Author) }
   \resumeItemListEnd
 
 %-----------AWARDS-----------------
-\section{Awards}
+\section{Honors}
   \begin{itemize}[leftmargin=*, itemsep=-12pt]
     \resumeMiniheading{"Star of Tomorrow" Title {\normalfont(For MSRA interns with outstanding performance)}}{2016}
     \resumeMiniheading{Silver Medal of EC-Final Round of ACM-ICPC contest}{2015}
-    \resumeMiniheading{IBM Scholarship and National Scholarship {\normalfont(For top 3 students in the dept.)}}{2013 -- 2014}
+    \resumeMiniheading{IBM Scholarship and National Scholarship {\normalfont(For top 3 students in the dept.)}}{2014}
     \resumeMiniheading{Global Rank 18/1000\texttt{+}, China Rank 2/50\texttt{+} in IEEExtreme Programming Contest}{2013}
     \resumeMiniheading{Meritorious Winner of MCM}{2013}
   \end{itemize}
 
-
-
-%
 %--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
+\section{Skills}
+  \begin{itemize}[leftmargin=*, itemsep=-3pt]
+    \item{
+      \textbf{Programming Languages}{: C\texttt{++}, Java, Python, Scala}
+    }
+    \item{
+      \textbf{Framework \& Libraries}{: Hadoop, Spark, Hive, Protobuf, Tensorflow, Keras, XGBoost}
+    }
+    \item{
+      \textbf{Methods \& Tools}{: Git, Latex, Linux}
+    }
+  \end{itemize}
 
 
 %-------------------------------------------
